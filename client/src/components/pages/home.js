@@ -1,54 +1,31 @@
 import * as React from "react";
-import { Chart } from "react-google-charts";
-import {  Grid, Cell } from  "react-mdl";
+import "./pages.css";
+import Graph from "../Grid/grid";
 
 function Home() {
     return(
         <div>
-            <Grid className="grid">
-                <Cell col={2}></Cell>
-                <Cell col={4}>
-        <       Chart
-                width={'900px'}
-                height={'500px'}
-                chartType="BarChart"
-                loader={<div>Loading Chart</div>}
-                data={[
-                [
-                    'Skills',
-                    'Level',
-                    { role: 'style' },
-                    { sourceColumn: 0,
-                      role: 'annotation',
-                      type: 'string',
-                      calc: 'stringify',
-                    },
-                ],
-                ['HTML/CSS/JavaScript', 80, '#b87333', null],
-                ['', 0, '', null],
-                ['Framework/React JS/ExpressJS/NodeJS', 75, 'silver', null],
-                ['', 0, '', null],
-                ['Progressive Web Apps', 60, 'color: #e5e4e2', null],
-                ['', 0, '', null],
-                ['Relational Databases/NoSQL Databases', 65, 'gold', null],
-                ['', 0, '', null],
-                ]}
-                options={{
-                title: 'My Skills',
-                width: "300px",
-                height: "300px",
-                bar: { groupWidth: '90%' },
-                legend: { position: 'none' },
-                }}
-                // For tests
-                rootProps={{ 'data-testid': '6' }}
-                />
-        </Cell>
-        <Cell col={6}></Cell>
-    </Grid>
-            
+            <h3>About Me</h3>
+            <p className="summary"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus in ipsum iaculis ullamcorper. Duis ut lobortis lacus. Duis dictum eget leo eu dignissim. 
+                Vestibulum aliquet velit et lectus iaculis, sodales ullamcorper mauris congue. Curabitur ut orci magna. Nulla bibendum leo tellus, at eleifend tortor cursus eget. 
+                Praesent cursus turpis est, eu gravida sem auctor eget. Morbi in nibh eleifend, commodo mi et, tincidunt ipsum. Ut vel elit faucibus, aliquam nisl non, aliquet ligula. 
+                Cras pulvinar hendrerit arcu non viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ex sapien, lacinia ut erat at, fringilla eleifend mi. 
+                Ut nulla velit, sollicitudin id urna eget, egestas malesuada eros. Phasellus interdum dui nec nisi pellentesque, et vestibulum orci eleifend. Vivamus vitae dui quis 
+                elit finibus tincidunt. Nunc hendrerit purus risus, sit amet viverra mauris commodo vel. Donec auctor ac odio id pharetra. Donec augue dolor, convallis vel odio ac, 
+                tristique faucibus est. Donec laoreet vulputate diam, in varius odio varius vel. Curabitur hendrerit malesuada commodo. Vestibulum massa est, consequat in eleifend lacinia, 
+                consectetur eget ipsum. Suspendisse suscipit elementum purus luctus ornare. Ut a felis magna. Nullam nec haretra tortor. Quisque vehicula velit nisl, at vulputate elit maximus a. 
+                Duis a hendrerit urna, non volutpat lacus. Donec eget semper ipsum. Aliquam erat volutpat. Sed convallis vehicula dolor, ut ultricies quam porta ac. Ut auctor malesuada sagittis.
+                 Maecenas quis est quam.
+            </p>
+            <div className="container">
+                <Graph  />
+            </div>
+            <p style={{ textAlign: "center"}}>Copyright &copy; 2020</p>
         </div>
     )
 };
 
 export default Home;
+
+

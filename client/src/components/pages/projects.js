@@ -97,11 +97,7 @@ function Projects() {
                     </Card>
                 </Cell>
             </Grid>
-        
-            
             {/* <Card shadow={0} style={{width: '512px', margin: 'auto'}}> */}
-        
-            
         </div>
     )
 }
